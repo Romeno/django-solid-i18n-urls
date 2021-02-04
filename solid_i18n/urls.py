@@ -4,11 +4,11 @@ from django import VERSION as DJANGO_VERSION
 from django.conf import settings
 
 if django.VERSION < (3, 0):
-    from django.utils.lru_cache import lru_cache  # noqa: F401
+    from django.utils.lru_cache import lru_cache
 else:
-    from functools import lru_cache  # noqa: F401
+    from functools import lru_cache
 
-from django.utils import six
+import six
 from django.core.urlresolvers import get_resolver
 
 from .urlresolvers import SolidLocaleRegexURLResolver
