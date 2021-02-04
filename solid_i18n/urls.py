@@ -1,7 +1,13 @@
 import warnings
 from django import VERSION as DJANGO_VERSION
 from django.conf import settings
-from django.utils import lru_cache, six
+
+if django.VERSION < (3, 0):
+    from django.utils.lru_cache import lru_cache  # noqa: F401
+else:
+    from functools import lru_cache  # noqa: F401
+
+from django.utils import six
 from django.core.urlresolvers import get_resolver
 
 from .urlresolvers import SolidLocaleRegexURLResolver
