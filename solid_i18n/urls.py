@@ -1,3 +1,4 @@
+import django
 import warnings
 from django import VERSION as DJANGO_VERSION
 from django.conf import settings
