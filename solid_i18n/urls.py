@@ -9,7 +9,7 @@ else:
     from functools import lru_cache
 
 import six
-from django.core.urlresolvers import get_resolver
+from django.urls import get_resolver
 
 from .urlresolvers import SolidLocaleRegexURLResolver
 
